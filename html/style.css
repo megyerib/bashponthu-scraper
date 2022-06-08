@@ -1,0 +1,35 @@
+body					{	margin: 0px 20px 0px 20px;
+							font-family: Verdana, Arial, Helvetica, sans-serif;
+							font-weight: normal;
+							font-size: 12px;
+							line-height: 16px;
+							color: black;
+							background-color: white;
+							min-width: 800px;
+						}
+#head					{	height: 45px;
+							border-bottom: 2px solid black;
+							background: url('logo.png') 10px 0px no-repeat;
+							text-align: right;
+							padding-top: 115px;
+							padding-right: 10px;
+							line-height: 20px;
+							font-size: 14px;
+						}
+#headline				{	height: 25px;
+							background: url('hline.png') 10px 0px no-repeat;
+						}
+#box					{	margin: 50px 190px 0px 190px;
+						}
+#foot					{	width: 100%;
+							margin-top: 10px;
+							border-top: 2px solid black;
+							margin-bottom: 30px;
+						}
+.qline					{	margin-top: 10px;
+							height: 20px;
+							line-height: 20px;
+						}
+.qtxt					{	padding: 5px;
+						}
+

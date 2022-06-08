@@ -6,5 +6,5 @@ indir=out/posts
 outfile=out/all.html
 
 cd $(dirname $0)
-cat $(ls $indir/* | sort -V) > $outfile
+cat $(ls $indir/* | sort -V) | sed "s|\*|\&ast;|" | ./htmlgen.sh > $outfile
 
