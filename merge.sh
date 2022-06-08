@@ -2,6 +2,9 @@
 
 set -eu
 
+indir=out/posts
+outfile=out/all.html
+
 cd $(dirname $0)
-cat $(ls out/* | sort -V) > all.html
+cat $(ls $indir/* | sort -V) > $outfile
 
