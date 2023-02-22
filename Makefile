@@ -1,6 +1,13 @@
-images = html/favicon.ico html/hline.png html/logo.png
+images := html/favicon.ico html/hline.png html/logo.png
+tag := $(shell (git tag --points-at HEAD | grep -m 1 -E ".+") || git rev-parse --short HEAD)
+release_zip := out/bashponthu-$(tag).zip
 
 all: out/sorban.html out/top.html
+
+release: $(release_zip)
+
+$(release_zip): out/sorban.html out/top.html
+	zip -j $@ $^
 
 out/sorban.html: out/posts/ $(images)
 	./sorban.sh
