@@ -1,12 +1,12 @@
 images = html/favicon.ico html/hline.png html/logo.png
 
-all: out/all_posts.html out/top100.html
+all: out/sorban.html out/top.html
 
-out/all_posts.html: out/posts/ $(images)
-	./all_posts.sh
+out/sorban.html: out/posts/ $(images)
+	./sorban.sh
 
-out/top100.html: out/posts/ $(images)
-	./top100.sh
+out/top.html: out/posts/ $(images)
+	./top.sh
 
 out/posts/: out/raw/
 	./process.py
