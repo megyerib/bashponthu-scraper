@@ -23,7 +23,7 @@ echo "</style>"
 tail -n +$((css_line + 1)) $template | head -n $((content_line - $css_line - 1)) | sed "s|favicon.ico|$favicon_base64|"
 
 while read -r line; do
-	echo $line
+	echo "$line"
 done
 
 tail -n +$((content_line + 1)) $template

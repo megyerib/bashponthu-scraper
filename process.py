@@ -29,7 +29,6 @@ for file_name in os.listdir(indir):
 			qline = re.sub(r' <a href="\/\d+\/vote\/up">\+<\/a>', r'', qline)
 			qline = re.sub(r' <a href="\/\d+\/vote\/down">-<\/a>', r'', qline)
 			qline = re.sub(r' \[<a href="\/\d+\/vote\/kill">X<\/a>\]', r'', qline)
-			qline = re.sub(r'\*', r'\&ast;', qline)  # A csillagok a HTML-ben összezavarják a bash-t
 			qlines.append(qline)
 
 		qtxts_raw = soup.find_all("div", {"class": "qtxt"})
